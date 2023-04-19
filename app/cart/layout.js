@@ -1,6 +1,5 @@
 import globalS from "/styles/globals.css";
 import S from "/styles/page.module.css";
-import Link from "next/link";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,10 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={globalS.body}>
-        <div className={S.nav}>
-          <Link href="/">Home</Link>
-          <Link href="/list">List</Link>
-        </div>
+        <p className={S.cartSub}>🍀 현대카드 무이자 이벤트 중 🍀</p>
         {children}
       </body>
     </html>
