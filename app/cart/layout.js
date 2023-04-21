@@ -10,9 +10,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={globalS.body}>
-        <p className={S.cartSub}>🍀 현대카드 무이자 이벤트 중 🍀</p>
+        <Banner content="현대카드" />
+        <Banner content="삼성카드" />
         {children}
       </body>
     </html>
   );
 }
+
+export const Banner = (props) => {
+  return <p className={S.cartSub}>🍀 {props.content} 무이자 이벤트 중 🍀</p>;
+};
