@@ -1,0 +1,62 @@
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.titleSub {
+  text-align: center;
+}
+
+.food {
+  margin: 20px auto;
+  width: 200px;
+  background: #d6ffff;
+  padding: 20px;
+  color: black;
+  border-radius: 5px;
+}
+
+.foodImg {
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  background: #b6ffff;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #00ccff;
+}
+
+.nav a:hover {
+  color: #f7ffff;
+}
+
+.cartTitle {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.cartSub {
+  text-align: center;
+}
+
+.cartItem {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #4be8ff;
+  line-height: 0px;
+}
+
+.cartDiv {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: right;
+}
