@@ -1,14 +1,16 @@
 import S from "/styles/page.module.css";
-import { hi, Button } from "./data.js";
+import { Button } from "./data.js";
 
 export default function Cart() {
   let cart = ["Tomatoes", "Pasta", "Bacon"];
 
   return (
     <div>
-      <h4 className={S.cartTitle}>{hi} Cart</h4>
-      <Button color="red" name="Click me" />
-      <Button color="blue" name="Click me" />
+      <h4 className={S.cartTitle}> Cart</h4>
+      <div className={S.cartDiv}>
+        <Button color="#00ccff" name="Buy now" />
+        <Button color="#73ffff" name="Delete" />
+      </div>
       <CartItem product={cart[0]} />
       <CartItem product={cart[1]} />
       <CartItem product={cart[2]} />

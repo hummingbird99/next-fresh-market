@@ -1,11 +1,9 @@
 "use client";
 
-export let hi = "안녕하세요";
-
 export const Button = (props) => {
   return (
     <button
-      onClick={props.click}
+      onClick={props.onClick}
       style={{
         backgroundColor: props.color,
         padding: "10px",

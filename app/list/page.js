@@ -5,29 +5,44 @@ import S from "/styles/page.module.css";
 import { Button } from "../cart/data";
 
 export default function List() {
-  let item = ["Tomatoes", "Pasta", "Bacon"];
+  let item = [
+    { name: "Tomatoes", price: 40 },
+    { name: "Pasta", price: 50 },
+    { name: "Bacon", price: 60 },
+  ];
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(item.map(() => 0));
 
-  function onIncrease() {
-    setCount(count + 1);
+  function onIncrease(i) {
+    setCount((prevCount) => {
+      const newCount = [...prevCount];
+      newCount[i]++;
+      return newCount;
+    });
   }
 
-  function onDecrease() {
-    setCount(count - 1);
+  function onDecrease(i) {
+    setCount((prevCount) => {
+      const newCount = [...prevCount];
+      newCount[i]--;
+      if (newCount[i] < 0) newCount[i] = 0;
+      return newCount;
+    });
   }
 
   return (
     <div>
       <h4 className={S.title}>상품 목록</h4>
-      {item.map((product, i) => {
+      {item.map((item, i) => {
         return (
           <div className={S.food} key={i}>
             <img src={`/food${i}.png`} className={S.foodImg} />
-            <h4 className={S.title}>{product} $40</h4>
-            <span> {count} </span>
-            <Button click={onIncrease} color="#4be8ff" name="➕" />
-            <Button click={onDecrease} color="#4be8ff" name="➖" />
+            <h4 className={S.title}>
+              {item.name} ${item.price}
+            </h4>
+            <span> {count[i]} </span>
+            <Button onClick={() => onIncrease(i)} color="#4be8ff" name="➕" />
+            <Button onClick={() => onDecrease(i)} color="#4be8ff" name="➖" />
           </div>
         );
       })}
