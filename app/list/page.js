@@ -41,8 +41,20 @@ export default function List() {
               {item.name} ${item.price}
             </h4>
             <span> {count[i]} </span>
-            <Button onClick={() => onIncrease(i)} color="#4be8ff" name="➕" />
-            <Button onClick={() => onDecrease(i)} color="#4be8ff" name="➖" />
+            <Button
+              onClick={() => onIncrease(i)}
+              color="#4be8ff"
+              name="Add to Cart"
+            >
+              ➕
+            </Button>
+            <Button
+              onClick={() => onDecrease(i)}
+              color="#4be8ff"
+              name="Remove from Cart"
+            >
+              ➖
+            </Button>
           </div>
         );
       })}

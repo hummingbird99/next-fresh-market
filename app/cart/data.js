@@ -1,11 +1,11 @@
 "use client";
 
-export const Button = (props) => {
+export const Button = ({ children, onClick, color, name }) => {
   return (
     <button
-      onClick={props.onClick}
+      onClick={onClick}
       style={{
-        backgroundColor: props.color,
+        backgroundColor: color,
         padding: "10px",
         borderRadius: "5px",
         border: "none",
@@ -15,7 +15,7 @@ export const Button = (props) => {
         marginRight: "2px",
       }}
     >
-      {props.name}
+      {children || name}
     </button>
   );
 };
